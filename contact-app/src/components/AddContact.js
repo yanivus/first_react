@@ -46,7 +46,7 @@ class AddContact extends React.Component {
 };
 
 // export default AddContact;
-export default function(props) {
+export default function AC(props) {
     const navigate = useNavigate();
     return <AddContact {...props} navigate={navigate} />;
 }
