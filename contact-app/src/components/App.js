@@ -9,7 +9,9 @@ import ContactList from "./ContactList"
 
 function App() {
   const LOCAL_STORAGE_KEY = "contacts"; 
-  const [contacts, setContacts] = useState(JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)));
+  let ctx = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+  if (ctx === null) ctx = [];
+  const [contacts, setContacts] = useState(ctx);
   
 
   
