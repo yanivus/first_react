@@ -8,13 +8,15 @@ const ContactCard = (props) => {
     return (
             <div className="item">
                 <img className="ui avatar image" src={user} alt="user" />
-                <div className="content">
+                <div className="content" style={{width:"80%"}}>
                     <Link to={`/contact/${id}`} state={{contact: props.contact}}>
                         <div className="header">{ name }</div>
-                        <div className="header">{ email }</div>
+                        <div>{ email }</div>
                     </Link>
-                    <i className="trash alternate outline icon" style={{color:"red", marginTop:"7px"}}
-                     onClick={ () => props.clickHandler(id)}></i>
+                    <div style={{marginTop:"-30px", marginRight:"0px", float:"right"}}>
+                        <i className="trash alternate outline icon" style={{color:"red", marginTop:"7px"}}
+                        onClick={ () => props.clickHandler(id)}></i>
+                    </div>
                 </div>
             </div>
     

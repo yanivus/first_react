@@ -22,14 +22,17 @@ const ContactList = (props) => {
     });
     return (
         <>
-            <div className="main" style={{color:"black", marginTop:"60px"}}>
-                <h2>Contact List</h2>
-                <Link to="/add">
-                    <button className="ui button blue right">Add Contact</button>
-                </Link>
+            <div className="main">
+                <div  style={{color:"black", marginTop:"60px"}}>
+                    <h2>Contact List</h2>
+                    <Link to="/add">
+                        <button className="ui button blue right" style={{marginTop:"-40px", float: "right"}}>Add Contact</button>
+                    </Link>
+                </div>
                 <div className="ui celled list">
                     {renderContactList}
                 </div>
+
             </div>
         </>
     );
