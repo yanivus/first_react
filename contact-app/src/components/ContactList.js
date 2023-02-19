@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import ContactCard from "./ContactCard";
 
 const ContactList = (props) => {
 
     // console.log(props);
-
+    const inputE1 = useRef("");
 
     const deleteContactHandler = (id) => {
         props.getContactId(id);
+    };
+
+    const getSearchTerm = () => {
+        // console.log(inputE1.current.value);
+        props.searchKeyword(inputE1.current.value);
     };
 
     const renderContactList = props.contacts.map((contact) => {
@@ -25,8 +30,15 @@ const ContactList = (props) => {
                         <button className="ui button blue right" style={{marginTop:"-40px", float: "right"}}>Add Contact</button>
                     </Link>
                 </div>
+                </div>
+                <div className="ui search">
+                    <div className="ui icon input">
+                        <input ref={inputE1} type="text" placeholder="search contact" 
+                           className="prompt" value={props.term} onChange={getSearchTerm} />
+                        <i className="search icon"></i>
+                    </div>
                 <div className="ui celled list">
-                    {renderContactList}
+                    {renderContactList.length > 0 ? renderContactList : "No contacts available"}
                 </div>
 
             </div>
