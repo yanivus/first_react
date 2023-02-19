@@ -1,24 +1,14 @@
 {
   "contacts": [
     {
-      "id": "51effb3a-0502-4301-8143-f2f9b3363a95",
-      "name": "Johns1",
-      "email": "john@gmail.com"
+      "id": "bed0532b-360d-4534-bd0c-b410806f2d25",
+      "name": "john21",
+      "email": "jb@jjk.com"
     },
     {
-      "id": "0b60bcd8-be96-4149-b332-f542f70498c0",
-      "name": "Jane",
-      "email": "jane@gmail.com"
-    },
-    {
-      "id": "b208e04b-50e5-4edb-8f72-9a45591f5787",
-      "name": "Bill",
-      "email": "bill@gmail.com"
-    },
-    {
-      "id": "a37b8654-f677-481e-91c6-e34d5c342ed5",
-      "name": "Jana",
-      "email": "jana@gmail.com"
+      "id": "c6a587ae-4d56-466e-a87a-936c5428697f",
+      "name": "jolo",
+      "email": "klo@pol.com"
     }
   ]
 }
